@@ -10,3 +10,6 @@
 
     }
 }
+@mixin anima($name, $duration, $keep, $delay: 0s ){
+  animation: $name $duration $keep $delay;
+}

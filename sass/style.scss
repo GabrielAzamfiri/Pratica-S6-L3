@@ -1,87 +1,99 @@
-@import "partials/variables","partials/colori","partials/placeholder","partials/spaziature", "partials/mixins", "partials/reset", "partials/animation";
+@import "partials/colori", "partials/buttons", "partials/spaziature", "partials/mixins", "partials/reset", "partials/animation";
 
-body{
-    margin: 0;
-    background-color: $text-color;
-    header{
-        background-color: $bg-color;
-        nav{
-            display: flex;
-            width: 80%;
-            margin: auto;
-            align-items: center;
-            img{
-                width: 50px;
-                background-color: transparent;
-            }
-            ul{
-                display: flex;
-                list-style: none;
-                gap: $size-5;
-                a{
-                    color: $text-color;
-                    text-decoration: none;
-                    font-size: $size-3;
-                    font-weight: 600;
-                    &:hover{
-                        color: scale-color($bg-color, $lightness: -60%);
-                    }
-                }
-            }
+body {
+  margin: 0;
+  background-color: $text-color;
+  header {
+    background-color: $bg-color;
+    nav {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      align-items: center;
+      img {
+        width: 50px;
+        background-color: transparent;
+        
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        gap: $size-5;
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: $size-4;
+          font-weight: 600;
+          &:hover {
+            color: scale-color($bg-color, $lightness: -60%);
+          }
         }
+      }
     }
-    main{
-        section{
-            display: flex;
-            width: 80%;
-            margin: auto;
-            align-items: center;
-            background-color:$bg-color ;
-            color: $text-color;
-            justify-content: space-around;
-            padding: $size-3;
-            overflow: hidden;
+  }
+  main {
+    section {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      align-items: center;
+      background-color: $bg-color;
+      color: $text-color;
+      justify-content: space-around;
+      padding: $size-3;
+      overflow: hidden;
 
-            div{
-                opacity: 0;
-                animation: fadeIn 1.5s forwards;
+      div {
+        opacity: 0;
+        @include anima(fadeIn, 1.5s, forwards);
+        // animation: fadeIn 1.5s forwards;
 
-                h1{
-                    @include title-big($size-7, 600);
-                }
-                p{
-                    font-size: $size-4;
-                    
-                }
-                div{
-                    button{
-                        @extend %btn-style
-                    }
-                    
-                }
-                
-            }
-            img{
-                width: 500px;
-                opacity: 0;
-                animation: fadeIn 1.5s forwards 1s;
-            }
+        h1 {
+          @include title-big($size-7, 600);
         }
-    }
-    .grigliaContainer{
-        .griglia{
-            display: flex;
-            width: 80%;
-            margin: auto;
-            align-items: center;
-            justify-content: space-between;
-            
-            color: $text-color;
-            img{
-                width: 22%;
-            }
-
+        p {
+          font-size: $size-4;
         }
+        div {
+          button {
+            @extend %btn-style;
+          }
+        }
+      }
+      img {
+        width: 500px;
+        opacity: 0;
+        @include anima(fadeIn, 1.5s, forwards, 0.5s);
+
+        // animation: fadeIn 1.5s forwards 1s;
+        border: 3px solid $text-color;
+        @include floating(15px, 0  2rem 1.5rem rgba(0, 0, 0, 0.45))
+
+      }
     }
+  }
+  .grigliaContainer {
+    .griglia {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: auto;
+      align-items: center;
+      
+      justify-content: space-between;
+
+      color: $text-color;
+      .imgBox {
+        overflow: hidden;
+        margin-bottom: $size-5;
+        @include floating(15px, 0  1rem 1.5rem rgba(0, 0, 0, 0.45));
+        @include grid(4)
+        
+    }
+    img {
+      width: 100%;
+      scale: 1.05;
+    }
+    }
+  }
 }
-

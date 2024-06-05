@@ -2,3 +2,19 @@
     font-size: $size ;
     font-weight: $weight;
 }
+@mixin floating($radius:3px, $shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)){
+    border-radius: $radius;
+    box-shadow: $shadow;
+}
+@mixin grid($numero){
+    @if( $numero==1){
+        width: 100%;
+    }@else if($numero==2){
+        width: 30%;
+    }@else if($numero==3){
+        width: 45%;
+    }@else if($numero==4){
+        width: 23%;
+      
+    }
+}
