@@ -1,0 +1,199 @@
+.btn-color-blue {
+  background-color: #0e6cff;
+}
+
+.btn-color-orange {
+  background-color: #ff8700;
+}
+
+.btn-color-green {
+  background-color: #4caf50;
+}
+
+body main section div div button {
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.padding-inline-xs {
+  padding-inline: 10px;
+}
+
+.padding-block-xs {
+  padding-block: 10px;
+}
+
+.margin-inline-xs {
+  margin-inline: 10px;
+}
+
+.margin-block-xs {
+  margin-block: 10px;
+}
+
+.padding-inline-sm {
+  padding-inline: 20px;
+}
+
+.padding-block-sm {
+  padding-block: 20px;
+}
+
+.margin-inline-sm {
+  margin-inline: 20px;
+}
+
+.margin-block-sm {
+  margin-block: 20px;
+}
+
+.padding-inline-md {
+  padding-inline: 30px;
+}
+
+.padding-block-md {
+  padding-block: 30px;
+}
+
+.margin-inline-md {
+  margin-inline: 30px;
+}
+
+.margin-block-md {
+  margin-block: 30px;
+}
+
+.padding-inline-lg {
+  padding-inline: 50px;
+}
+
+.padding-block-lg {
+  padding-block: 50px;
+}
+
+.margin-inline-lg {
+  margin-inline: 50px;
+}
+
+.margin-block-lg {
+  margin-block: 50px;
+}
+
+.padding-inline-xl {
+  padding-inline: 100px;
+}
+
+.padding-block-xl {
+  padding-block: 100px;
+}
+
+.margin-inline-xl {
+  margin-inline: 100px;
+}
+
+.margin-block-xl {
+  margin-block: 100px;
+}
+
+.padding-inline-xxl {
+  padding-inline: 150px;
+}
+
+.padding-block-xxl {
+  padding-block: 150px;
+}
+
+.margin-inline-xxl {
+  margin-inline: 150px;
+}
+
+.margin-block-xxl {
+  margin-block: 150px;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+}
+body header {
+  background-color: #640fc5;
+}
+body header nav {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+body header nav img {
+  width: 50px;
+  background-color: transparent;
+}
+body header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+body header nav ul a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+body header nav ul a:hover {
+  color: #28064f;
+}
+body main section {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  background-color: #640fc5;
+  color: #f4f4f4;
+  justify-content: space-around;
+  padding: 1rem;
+  overflow: hidden;
+}
+body main section div {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+body main section div h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+body main section div p {
+  font-size: 1.5rem;
+}
+body main section img {
+  width: 500px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards 1s;
+}
+body .grigliaContainer .griglia {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  color: #f4f4f4;
+}
+body .grigliaContainer .griglia img {
+  width: 22%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translatey(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0%);
+  }
+}/*# sourceMappingURL=style.css.map */
